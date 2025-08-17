@@ -20,12 +20,14 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import {
+  Book,
   Brush,
   ChevronsUpDown,
   Palette,
   Plus,
   Settings,
   SquareDashed,
+  SquareRoundCorner,
   Type,
   User,
 } from "lucide-react";
@@ -60,6 +62,20 @@ export function AppSidebar() {
                 <SidebarMenuButton asChild>
                   <Link href="/fonts">
                     <Type /> Fonts
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="/shapes">
+                    <SquareRoundCorner /> Shapes
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="/guidelines">
+                    <Book /> Guidelines
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
