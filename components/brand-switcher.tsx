@@ -34,11 +34,10 @@ export function BrandSwitcher() {
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
               <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                T
+                T1
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-medium">Test</span>
-                <span className="truncate text-xs">test</span>
+                <span className="truncate font-medium">Test 1</span>
               </div>
               <ChevronsUpDown className="ml-auto" />
             </SidebarMenuButton>
@@ -53,10 +52,16 @@ export function BrandSwitcher() {
               Brands
             </DropdownMenuLabel>
             <DropdownMenuItem className="gap-2 p-2">
-              <div className="flex size-6 items-center justify-center rounded-md border">
-                t
+              <div className="flex size-6 items-center justify-center rounded-md border bg-sidebar-primary text-sidebar-primary-foreground">
+                T1
               </div>
-              Test
+              Test 1
+            </DropdownMenuItem>
+            <DropdownMenuItem className="gap-2 p-2">
+              <div className="flex size-6 items-center justify-center rounded-md border">
+                T2
+              </div>
+              Test 2
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="gap-2 p-2">
