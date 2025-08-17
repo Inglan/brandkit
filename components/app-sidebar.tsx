@@ -3,6 +3,7 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarGroup,
+  SidebarGroupContent,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
@@ -17,8 +18,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { ChevronsUpDown, Plus } from "lucide-react";
+import {
+  Brush,
+  ChevronsUpDown,
+  Palette,
+  Plus,
+  SquareDashed,
+  Type,
+} from "lucide-react";
 import { BrandSwitcher } from "./brand-switcher";
+import Link from "next/link";
 
 export function AppSidebar() {
   return (
@@ -27,7 +36,33 @@ export function AppSidebar() {
         <BrandSwitcher />
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup />
+        <SidebarGroup>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="/logos">
+                    <SquareDashed /> Logos
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="/colors">
+                    <Palette /> Colors
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="/fonts">
+                    <Type /> Fonts
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
         <SidebarGroup />
       </SidebarContent>
       <SidebarFooter />
