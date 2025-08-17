@@ -4,6 +4,7 @@ import {
   SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
+  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
@@ -23,8 +24,10 @@ import {
   ChevronsUpDown,
   Palette,
   Plus,
+  Settings,
   SquareDashed,
   Type,
+  User,
 } from "lucide-react";
 import { BrandSwitcher } from "./brand-switcher";
 import Link from "next/link";
@@ -57,6 +60,27 @@ export function AppSidebar() {
                 <SidebarMenuButton asChild>
                   <Link href="/fonts">
                     <Type /> Fonts
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Admin</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="/users">
+                    <User /> Users
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="/users">
+                    <Settings /> Settings
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
